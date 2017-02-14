@@ -1,0 +1,32 @@
+{
+  "name": "xslmodule",
+  "version": "0.0.0",
+  "description": "XSL DOM assembler labrary",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aristov/xslmodule.git"
+  },
+  "keywords": [
+    "XSL",
+    "DOM",
+    "XML",
+    "stylesheet",
+    "xml-stylesheet",
+    "test/xsl",
+    "XSLT",
+    "XPath",
+    "XQuery",
+    "XSLTProcessor",
+    "JavaScript"
+  ],
+  "author": "Vyacheslav Aristov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aristov/xslmodule/issues"
+  },
+  "homepage": "https://github.com/aristov/xslmodule#readme"
+}
