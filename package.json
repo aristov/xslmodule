@@ -1,7 +1,7 @@
 {
   "name": "xslmodule",
   "version": "0.0.0",
-  "description": "XSL DOM assembler labrary",
+  "description": "XSL DOM assembler library",
   "main": "index.js",
   "scripts": {
     "test": "npm test"
