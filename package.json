@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/aristov/xslmodule/issues"
   },
-  "homepage": "https://github.com/aristov/xslmodule#readme"
+  "homepage": "https://github.com/aristov/xslmodule#readme",
+  "dependencies": {
+    "dommodule": "^0.1.0"
+  }
 }
