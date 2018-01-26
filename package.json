@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/aristov/xslmodule#readme",
   "dependencies": {
-    "dommodule": "^0.1.0"
+    "dommodule": "aristov/dommodule"
   }
 }
