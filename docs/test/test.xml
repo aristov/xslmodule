@@ -13,4 +13,10 @@
         <endTime>2018-01-28T15:00+03:00</endTime>
         <subject>Fa</subject>
     </interval>
+    <interval>
+        <agent>Arseny</agent>
+        <startTime>2018-01-30T09:00+03:00</startTime>
+        <endTime>2018-01-30T12:00+03:00</endTime>
+        <subject>Forte</subject>
+    </interval>
 </schedule>
