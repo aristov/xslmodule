@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<schedule>
+    <interval>
+        <agent>Vyacheslav</agent>
+        <startTime>2018-01-27T18:00+03:00</startTime>
+        <endTime>2018-01-27T21:00+03:00</endTime>
+        <subject>Neo</subject>
+    </interval>
+    <interval>
+        <agent>Alexandra</agent>
+        <startTime>2018-01-28T12:00+03:00</startTime>
+        <endTime>2018-01-28T15:00+03:00</endTime>
+        <subject>Fa</subject>
+    </interval>
+</schedule>
