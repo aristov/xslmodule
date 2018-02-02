@@ -4,7 +4,8 @@
   "description": "XSL DOM assembler library",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "webpack": "webpack -w"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
   "homepage": "https://github.com/aristov/xslmodule#readme",
   "dependencies": {
     "dommodule": "aristov/dommodule"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
   }
 }

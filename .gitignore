@@ -2,5 +2,7 @@
 .idea/
 npm-debug.log
 /dist
+/build
 node_modules
 tmp
+*.build.js
