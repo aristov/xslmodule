@@ -1,5 +1,5 @@
 import { element } from 'dommodule'
-import { XSLDocumentAssembler, applyTemplates, template, valueOf } from '../../lib'
+import { XSLTransform, applyTemplates, template, valueOf } from '../../lib'
 
 const html = children => element({ localName : 'html' , children })
 const title = children => element({ localName : 'title' , children })
@@ -10,7 +10,7 @@ const tr = children => element({ localName : 'tr' , children })
 const th = children => element({ localName : 'th' , children })
 const td = children => element({ localName : 'td' , children })
 
-const stylesheet = new XSLDocumentAssembler({
+const stylesheet = new XSLTransform({
     documentElement : {
         version : '3.0',
         children : [
