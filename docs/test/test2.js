@@ -1,87 +1,48 @@
 import { element } from 'dommodule'
 import { XSLDocumentAssembler, applyTemplates, template, valueOf } from '../../lib'
 
+const html = children => element({ localName : 'html' , children })
+const title = children => element({ localName : 'title' , children })
+const meta = ({ charset }) => element({ localName : 'meta' , attrset : { charset } })
+const link = ({ rel, href }) => element({ localName : 'link' , attrset : { rel, href } })
+const table = children => element({ localName : 'table' , children })
+const tr = children => element({ localName : 'tr' , children })
+const th = children => element({ localName : 'th' , children })
+const td = children => element({ localName : 'td' , children })
+
 const stylesheet = new XSLDocumentAssembler({
     documentElement : {
-        version : '3:0',
+        version : '3.0',
         children : [
             template({
                 match : '/',
-                children : element({
-                    localName : 'html',
-                    children : [
-                        element({
-                            localName : 'title',
-                            children : 'Schedule'
-                        }),
-                        element({
-                            localName : 'meta',
-                            attrset : { charset : 'utf-8' }
-                        }),
-                        element({
-                            localName : 'link',
-                            attrset : {
-                                rel : 'stylesheet',
-                                href : 'test.css'
-                            }
-                        }),
-                        applyTemplates()
-                    ]
-                })
+                children : html([
+                    title('Schedule'),
+                    meta({ charset : 'utf-8' }),
+                    link({ rel : 'stylesheet', href : 'test.css' }),
+                    applyTemplates()
+                ])
             }),
             template({
                 match : 'schedule',
-                children : element({
-                    localName : 'table',
-                    children : [
-                        element({
-                            localName : 'tr',
-                            children : [
-                                element({
-                                    localName : 'th',
-                                    children : 'Agent'
-                                }),
-                                element({
-                                    localName : 'th',
-                                    children : 'Subject'
-                                }),
-                                element({
-                                    localName : 'th',
-                                    children : 'Start Time'
-                                }),
-                                element({
-                                    localName : 'th',
-                                    children : 'End Time'
-                                })
-                            ]
-                        }),
-                        applyTemplates()
-                    ]
-                })
+                children : table([
+                    tr([
+                        th('Agent'),
+                        th('Subject'),
+                        th('Start Time'),
+                        th('End Time')
+                    ]),
+                    applyTemplates()
+                ])
             }),
             template({
                 match : 'interval',
-                children : element({
-                    localName : 'tr',
-                    children : [
-                        element({
-                            localName : 'td',
-                            children : valueOf({ select : 'agent' })
-                        }),
-                        element({
-                            localName : 'td',
-                            children : valueOf({ select : 'subject' })
-                        }),
-                        element({
-                            localName : 'td',
-                            children : valueOf({ select : 'startTime' })
-                        }),
-                        element({
-                            localName : 'td',
-                            children : valueOf({ select : 'endTime' })
-                        })
-                    ]
-                })
+                children : tr([
+                    td(valueOf({ select : 'agent' })),
+                    td(valueOf({ select : 'subject' })),
+                    td(valueOf({ select : 'startTime' })),
+                    td(valueOf({ select : 'endTime' }))
+                ])
             })
         ]
     }
