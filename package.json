@@ -31,7 +31,8 @@
   },
   "homepage": "https://github.com/aristov/xslmodule#readme",
   "dependencies": {
-    "dommodule": "aristov/dommodule"
+    "dommodule": "aristov/dommodule",
+    "xmlmodule": "aristov/xmlmodule"
   },
   "devDependencies": {
     "webpack": "^3.10.0"
